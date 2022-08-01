@@ -1,1 +1,21 @@
-adfadf
+**FLIPKART GRID 4.0**
+
+UNET
+
+It is a fully convolutional neural network model. which is developed to use in medical segmentation.
+For an approach we used this model to separate the cloth from the image which we get from the YouTube dataset or from any other platform.
+ Here Train_UNET is the trained model with some sample images inorder to predict and produces the output for a new image.
+
+. Using semantic image segmentation, a convolutional neural network model is trained to detect the types of
+clothes from images.
+• We utilized discrimination because we want to distinguish between backgrounds, skin, and clothing.
+Because backgrounds and skins are the most important sources of noise in this type of problem, we try to
+eliminate them.
+• We recreated the masks using the cuttings, by simply binarizing the image. The skin is obtained as a result
+of the difference between people and their clothing.
+• We trained a model that takes a raw image as input and produces a three-dimensional mask that can recreate
+the desired separation between skin/background and dress from the original images. As a result, when a new
+raw image comes, we can divide it into three parts: background, skin, and dress. We take into consideration
+only the channel of our interest (dress). By using UNET segments the type of cloths.
+• UNET uses convolution blocks followed by a maxpool down sampling to encode the input image into
+feature representations at multiple levels.
